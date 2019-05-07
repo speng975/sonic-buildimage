@@ -244,7 +244,8 @@ RUN apt-get -y build-dep linux
 
 # For gobgp and telemetry build
 RUN export VERSION=1.11.5 \
- && wget https://storage.googleapis.com/golang/go$VERSION.linux-amd64.tar.gz \
+# && wget https://storage.googleapis.com/golang/go$VERSION.linux-amd64.tar.gz \
+ && wget https://studygolang.com/dl/golang/go$VERSION.linux-amd64.tar.gz \
  && tar -C /usr/local -xzf go$VERSION.linux-amd64.tar.gz \
  && echo 'export GOROOT=/usr/local/go' >> /etc/bash.bashrc \
  && echo 'export PATH=$PATH:$GOROOT/bin' >> /etc/bash.bashrc
